@@ -12,6 +12,18 @@ class Solution:
             else:
                 return [x, y]   #集合相同就返回答案
 
+# 利用py集合特性也可以做并查集，本质上没有区别，不过不用递归了。
+#
+# class Solution:
+#     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
+#         p = {i: {i} for i in range(1, len(edges) + 1)}  #并查集初始化
+#         for x, y in edges:
+#             if p[x] is not p[y]:    #如果两个集合地址不一样
+#                 p[x] |= p[y]        #合并集合
+#                 for z in p[y]:
+#                     p[z] = p[x]     #修改元素集合标记的指针地址
+#             else:
+#                 return [x, y]
 
 
 # https://leetcode-cn.com/problems/redundant-connection/solution/12xing-de-chun-chun-bing-cha-ji-by-tuotuoli/
