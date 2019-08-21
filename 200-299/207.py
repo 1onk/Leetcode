@@ -20,3 +20,5 @@ class Solution:
                 if not indegrees[cur]:
                     queue.append(cur)
         return not numCourses
+
+# https://leetcode-cn.com/problems/course-schedule/solution/course-schedule-tuo-bu-pai-xu-bfsdfsliang-chong-fa/
